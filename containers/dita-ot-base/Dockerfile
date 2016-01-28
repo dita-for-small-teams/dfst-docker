@@ -14,10 +14,8 @@ ENV ANT_HOME $DITA_HOME/tools/ant
 ENV PATH $ANT_HOME/bin:$DITA_HOME:$PATH
 USER 5555
 WORKDIR $HOME
-# This URL does not seem to be reliable.
-#RUN wget -c http://sourceforge.net/projects/dita-ot/files/DITA-OT%20Stable%20Release/DITA%20Open%20Toolkit%201.8/DITA-OT1.8.5_full_easy_install_bin.zip 
+RUN wget -c http://sourceforge.net/projects/dita-ot/files/DITA-OT%20Stable%20Release/DITA%20Open%20Toolkit%201.8/DITA-OT1.8.5_full_easy_install_bin.zip 
 # For doing lots of builds to avoid fetching each time.
-COPY DITA-OT1.8.5_full_easy_install_bin.zip /home/dita-ot/DITA-OT1.8.5_full_easy_install_bin.zip
 RUN unzip DITA-OT1.8.5_full_easy_install_bin.zip && \
     rm DITA-OT1.8.5_full_easy_install_bin.zip
 # Use a consistent name for the OT so we don't have to worry about it
