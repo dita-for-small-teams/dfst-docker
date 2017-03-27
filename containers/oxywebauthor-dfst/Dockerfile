@@ -17,6 +17,7 @@ RUN curl --silent --show-error --fail --location \
 ADD settings.xml /usr/local/tomcat/conf/
 ADD tomcat-users.xml /usr/local/tomcat/conf/
 ADD license.properties /usr/local/tomcat/webapps/oxygenxml-web-author/WEB-INF/
+ADD options.xml /usr/local/tomcat/work/Catalina/localhost/oxygenxml-web-author/options/
 RUN ls /usr/local/tomcat/webapps/oxygenxml-web-author/WEB-INF/
 
 #
