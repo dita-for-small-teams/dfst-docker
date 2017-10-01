@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
+<topic id="development-guide">
+    <title>D4ST Development Guide</title>
+  <shortdesc>How to set up and manage your D4ST Docker development environment.</shortdesc>
+    <body>
+    <p>Developing the D4ST Docker components requires setting up your local Docker containers to use
+      local versions of files rather than the versions included directly in the containers as
+      distributed. Once you have this set up then it's reasonably easy to make code changes and see
+      them reflected in your running Docker containers without having to rebuild or restart the
+      containers.</p>
+  </body>
+</topic>

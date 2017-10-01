@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="source_project_organization">
+    <title>Source project organization</title>
+    <shortdesc>How to organize the various GitHub projects that contribute to the D4ST Docker
+    system.</shortdesc>
+    <conbody>
+    <p>As a general rule, the latest code in projects is on the "develop" branch, with the "master"
+      branch reserved for reflecting formal 1.x+ releases. This should be reflected in the default
+      branch settings for each project in GitHub.</p>
+    <note>The project names may reflect the older "dfst" or the newer "d4st" abbreviation for DITA
+      for Small Teams.</note>
+        <p>The D4ST Docker system uses the following GitHub projects:</p>
+    <dl>
+      <dlentry>
+        <dt>d4st-docker</dt>
+        <dd>(<xref keyref="github-d4st-docker"/>)<p>Provides the Docker-specific materials,
+            including the D4ST-specific container definitions, docker-compose files used to manage
+            the running containers, and the <cmdname>d4st</cmdname> bash script. </p><p>Defines the
+            following Docker containers:<ul id="ul_j3q_fyc_kbb">
+              <li>caddy-d4st: Provides a simple Web server container for testing generated
+                  outputs.<note>As of September 2017 Caddy has changed their licensing so that the
+                  compiled version of Caddy cannot be used for anything other than personal or
+                  academic use. This probably makes it inappropriate for out-of-the-box inclusion in
+                  the D4ST system. However, this situation may change.</note></li>
+              <li>dita-ot: Provides a D4ST-specific DITA OT container as a convenience. Out of the
+                box it is just a standard latest version container.</li>
+              <li>dita-ot-base: Base OT container, used as the base for the D4ST dita-ot container. </li>
+              <li>gitlab-d4st: A D4ST-specific packaging of the GitLab Community Edition. Includes
+                the server-side commit hooks used to integrate with the D4ST Link Manager.</li>
+              <li>link-manager-basex: The BaseX-based D4ST Link Manager. Includes the XQuery code
+                from the dfst-linkmgmt-basex project.</li>
+              <li>oxywebauthor-d4st: A D4ST-specific packaging of the oXygenXML Web Author server.
+                It includes a demo license configuration provided by Syncro Soft specifically for
+                use with the D4ST project.</li>
+            </ul></p><p>The documentation is managed on a special "docs" branch that has only the
+            documentation in it. This allows the project documentation to be easily integrated with
+            other projects' documentation, e.g., with the larger DITA for Small Teams project
+            documentation.</p></dd>
+      </dlentry>
+      <dlentry>
+        <dt>dfst-git-commit-hooks</dt>
+        <dd>(<xref keyref="github-dfst-git-commit-hooks"/>)<p>Provides the client-side and
+            server-side git hooks used to keep the D4ST Link Manager in sync with git repositories.
+            The server-side files in this project are used by the GitLab container.</p></dd>
+      </dlentry>
+      <dlentry>
+        <dt>dfst-linkmgmt-basex</dt>
+        <dd>(<xref keyref="github-dfst-linkmgmt-basex"/>)<p>Provides the implementation of the D4ST
+            Link Manager application for use with the BaseX XML database. These files are used by
+            the d4st/linkmgr Docker container.</p></dd>
+      </dlentry>
+      <dlentry>
+        <dt>dita-demo-content-collection</dt>
+        <dd>(<xref keyref="github-dita-demo-content-collection"/>)<p>Provides ready-to-use
+            non-trivial DITA content that is packaged into a separate container to make it easy to
+            set up a realistic D4ST working environment. Provides the ditacommunity/demo-content
+            Docker container.</p></dd>
+      </dlentry>
+    </dl>
+    </conbody>
+</concept>
