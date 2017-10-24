@@ -32,22 +32,14 @@
         <topicmeta>
           <navtitle>External Web Sites</navtitle>
         </topicmeta>
-        <keydef href="https://hub.docker.com/r/d4st/gitlab-d4st/" keys="docker-hub-gitlab"
-          format="html" scope="external"/>
-        <keydef href="https://github.com/dita-for-small-teams/d4st-docker" keys="github-d4st-docker"
-          scope="external" format="html">
+        <keydef keys="website-d4st-github-organization"          format="html" scope="external"
+          href="http://github.com/dita-for-small-teams"/>
+        <keydef href="https://github.com/dita-for-small-teams/d4st-docker"
+          keys="website-d4st-github-d4st-docker-project"          scope="external" format="html">
           <topicmeta>
             <navtitle>https://github.com/dita-for-small-teams/d4st-docker</navtitle>
           </topicmeta>
         </keydef>
-        <keydef href="https://github.com/dita-for-small-teams/dfst-git-commit-hooks"
-          keys="github-dfst-git-commit-hooks" format="html" scope="external"/>
-        <keydef href="https://github.com/dita-for-small-teams/dfst-linkmgmt-basex"
-          keys="github-dfst-linkmgmt-basex" format="html" scope="external"/>
-        <keydef href="https://github.com/dita-community/dita-demo-content-collection"
-          keys="github-dita-demo-content-collection" format="html" scope="external"/>
-        <keydef keys="website-d4st-github-organization" format="html" scope="external"
-          href="http://github.com/dita-for-small-teams"/>
         <keydef href="https://github.com/dita-for-small-teams/dita-for-small-teams/releases"
           keys="website-d4st-github-project-releases" format="html" scope="external">
           <topicmeta>
@@ -110,6 +102,12 @@
         </keydef>
         <keydef href="d4st-docker-guide/getting-started/media/gitlab-gear-icon-01.png"
           keys="icon-gitlab-gear-01" format="png">
+          <topicmeta>
+            <navtitle>GitLab gear icon</navtitle>
+          </topicmeta>
+        </keydef>
+      <keydef href="d4st-docker-guide/getting-started/media/oxygen-git-icon-01.png"
+          keys="icon-oxygen-git-01" format="png">
           <topicmeta>
             <navtitle>GitLab gear icon</navtitle>
           </topicmeta>
