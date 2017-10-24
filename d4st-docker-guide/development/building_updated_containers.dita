@@ -1,9 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="building_updated_containers">
-    <title>Building updated containers</title>
-    <shortdesc></shortdesc>
+    <title>Building, Testing, and Releasing Updated Containers</title>
+    <shortdesc>How to build new versions of the various D4ST Docker containers.</shortdesc>
     <conbody>
-        <p></p>
+        <p>All the D4ST Docker containers are managed through the Docker Hub web site and are built
+      automatically whenever updates are pushed to each container's associated GitHub
+      repository.</p>
+    <p>However, rebuildling the containers can take time because Docker Hub is a shared
+      resource.</p>
+    <p>For local testing you can use the normal <cmdname>docker build</cmdname> command to build a
+      container in order to test changes. While it is possible to use
+        <cmdname>docker-compose</cmdname> to build a set of containers in one go, the D4ST Docker
+      docker-compose files are not set up to do that because usually it's not that useful (because
+      of the use of Docker Hub to manage official builds).</p>
+    <p>You also need to be careful that you're running the right container instance: it's easy to
+      build a new container but still run an old image locally. The <cmdname>d4st</cmdname> command
+      includes options to clean up all D4ST containers and all D4ST images, which can be useful to
+      clean up your local environment before doing local builds.</p>
+    <p>To do a full release-time regression test you should do the following:<ol id="ol_ppd_gbd_kbb">
+        <li>Merge all changes to the project's "develop" branch and otherwise ensure that everything
+          appears to be working as it should.</li>
+        <li>Push all the projects's "develop" branch to GitHub. This will trigger rebuilding of all
+          the containers on Docker Hub. You can use the Docker Hub web site to check the status of
+          the automatic builds. The result will be new images for the "latest" and "develop"
+          tags.</li>
+        <li>On a different system, ideally a Windows machine, do a "<cmdname>d4st pull</cmdname>" to
+          get the latest containers and then <cmdname>d4st start</cmdname> followed by any
+          operational tests you need to do to verify the functionality.</li>
+      </ol></p>
+    <p>For a release, create a tag reflecting the release number in each git repository and push
+      them to GitHub. This will again trigger creation of containers that reflect the tag name.</p>
+    <p>Create a new D4ST Docker release package and create the release on the d4st-docker GitHub
+      project. </p>
     </conbody>
 </concept>

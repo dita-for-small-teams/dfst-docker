@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="source_project_organization">
-    <title>Source project organization</title>
+    <title>Source Project Organization</title>
     <shortdesc>How to organize the various GitHub projects that contribute to the D4ST Docker
     system.</shortdesc>
     <conbody>
@@ -58,5 +58,11 @@
             Docker container.</p></dd>
       </dlentry>
     </dl>
+    <p>To set up a development environment you should clone each of these projects to same parent
+      directory. In addition, you should clone the d4st-docker project to a separate
+        <filepath>d4st-docker-docs</filepath> directory and check out the "docs" branch. The
+      d4st-docker project's develop and feature branches do not include the
+        <filepath>docs/</filepath> directory in order to avoid confusion about where the
+      documentation source is within your development environment.</p>
     </conbody>
 </concept>

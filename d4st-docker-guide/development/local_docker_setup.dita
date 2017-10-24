@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
 <concept id="local_docker_setup">
-    <title>Local Docker setup</title>
-    <shortdesc></shortdesc>
+    <title>Local Docker Development Setup</title>
+    <shortdesc>How to configure the running D4ST Docker containers to make development
+    easy.</shortdesc>
     <conbody>
         <p></p>
     </conbody>
