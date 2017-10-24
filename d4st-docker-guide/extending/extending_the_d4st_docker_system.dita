@@ -14,7 +14,7 @@
       out-of-the-box D4ST containers using <cmdname>docker-compose</cmdname> and provides guidance
       on how to set up and use your own containers.</p>
     <p>These instructions assume that you have a copy of the d4st-docker project from GitHub (<xref
-        keyref="github-d4st-docker"/>) in some convenient location, such as
+        keyref="website-d4st-github-d4st-docker-project"/>) in some convenient location, such as
         <filepath>c:\workspace\d4st-docker</filepath> or similar. In these instructions
         "<filepath>d4st-docker</filepath>" is used as the root directory for the project. Any
       relative paths in instructions are relative to the root of the project unless stated
